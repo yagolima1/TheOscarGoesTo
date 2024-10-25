@@ -31,8 +31,13 @@ SELECT * FROM indicados_ao_oscar WHERE nome_do_indicado like "%Amy Adams%";
 ---
 
 ### 4) A série de filmes Toy Story ganhou um Oscar em quais anos?
-**Resposta**:  
+**Resposta**: Toy Story já ganhou o Oscar em 2011 e 2020.
 
+Q:
+```sql
+SELECT * FROM indicados_ao_oscar WHERE nome_do_filme like "%Toy Story%" AND vencedor = "true";
+```
+---
 
 ### 5) A partir de que ano a categoria "Actress" deixa de existir?
 **Resposta**:  
