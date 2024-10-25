@@ -95,8 +95,13 @@ INSERT INTO indicados_ao_oscar(ano_filmagem,ano_cerimonia,cerimonia,categoria,no
 ---
 
 ### 11) Denzel Washington já ganhou algum Oscar?
-**Resposta**:  
+**Resposta**: Sim! Ele já ganhou 2 vezes, um em 1990 e outro em 2002.
 
+Q:
+```sql
+SELECT * FROM indicados_ao_oscar WHERE nome_do_indicado like "%Denzel Washington%" AND vencedor = "1";
+```
+---
 
 ### 12) Quais filmes ganharam o Oscar de Melhor Filme?
 **Resposta**:  
