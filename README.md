@@ -40,7 +40,13 @@ SELECT * FROM indicados_ao_oscar WHERE nome_do_filme like "%Toy Story%" AND venc
 ---
 
 ### 5) A partir de que ano a categoria "Actress" deixa de existir?
-**Resposta**:  
+**Resposta**: Ela deixa de existir a partir de 1977.
+
+Q:
+```sql
+SELECT * FROM indicados_ao_oscar WHERE categoria = "ACTRESS" ORDER BY ano_cerimonia DESC;
+```
+---
 
 ### 6) Quem ganhou o primeiro Oscar de Melhor Atriz? Em que ano?
 **Resposta**:  
