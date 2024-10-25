@@ -49,8 +49,13 @@ SELECT * FROM indicados_ao_oscar WHERE categoria = "ACTRESS" ORDER BY ano_cerimo
 ---
 
 ### 6) Quem ganhou o primeiro Oscar de Melhor Atriz? Em que ano?
-**Resposta**:  
+**Resposta**: A primeira mulher a ganhar o Oscar de "Melhor Atriz" foi a Janet Gaynor, no ano de 1928.
 
+Q:
+```sql
+SELECT * FROM indicados_ao_oscar WHERE vencedor = "true" AND categoria = "ACTRESS";
+```
+---
 
 ### 7) No campo "Vencedor", altere todos os valores com "true" para 1 e todos os valores "false" para 0.
 
