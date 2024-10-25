@@ -6,9 +6,20 @@ Este repositório contém uma base de dados sobre os indicados ao Oscar, e a ati
 ### 1. Quantas vezes Natalie Portman foi indicada ao Oscar?
 **Resposta**:  3 vezes
 
-### 2. Quantos Oscars Natalie Portman ganhou?
-**Resposta**:  
+Q:
+```sql
+SELECT COUNT(*) FROM indicados WHERE "Name" Like "%Natalie Portman%";
+```
+---
 
+### 2. Quantos Oscars Natalie Portman ganhou?
+**Resposta**: Ela já ganhou 1 Oscar.
+
+Q:
+```sql
+SELECT * FROM indicados_ao_oscar WHERE nome_do_indicado like "%Natalie Portman%" AND vencedor = "true";
+```
+---
 
 ### 3. Amy Adams já ganhou algum Oscar?
 **Resposta**:  
