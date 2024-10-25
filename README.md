@@ -76,7 +76,13 @@ SELECT nome_do_filme, cerimonia FROM indicados_ao_oscar WHERE nome_do_filme like
 ---
 
 ### 9) O filme *Central do Brasil* aparece no Oscar?
-**Resposta**:  
+**Resposta**: Sim, ele aparece no ano de 1999.
+
+Q:
+```sql
+ SELECT * FROM indicados_ao_oscar WHERE nome_do_filme like "Central%";
+```
+---
 
 ### 10) Inclua no banco 3 filmes que nunca foram nomeados ao Oscar, mas que merecem ser.
 
