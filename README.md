@@ -67,7 +67,13 @@ UPDATE indicados_ao_oscar SET vencedor = "1" WHERE vencedor = "true";
 ---
 
 ### 8) Em qual edição do Oscar o filme *Crash* concorreu?
-**Resposta**:  
+**Resposta**: A 78° Edição
+
+Q:
+```sql
+SELECT nome_do_filme, cerimonia FROM indicados_ao_oscar WHERE nome_do_filme like "%Crash";
+```
+---
 
 ### 9) O filme *Central do Brasil* aparece no Oscar?
 **Resposta**:  
