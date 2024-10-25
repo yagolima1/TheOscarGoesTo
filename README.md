@@ -59,6 +59,13 @@ SELECT * FROM indicados_ao_oscar WHERE vencedor = "true" AND categoria = "ACTRES
 
 ### 7) No campo "Vencedor", altere todos os valores com "true" para 1 e todos os valores "false" para 0.
 
+Q:
+```sql
+UPDATE indicados_ao_oscar SET vencedor = "1" WHERE vencedor = "true";
+ UPDATE indicados_ao_oscar SET vencedor = "0" WHERE vencedor = "false";
+```
+---
+
 ### 8) Em qual edição do Oscar o filme *Crash* concorreu?
 **Resposta**:  
 
