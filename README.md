@@ -86,6 +86,14 @@ Q:
 
 ### 10) Inclua no banco 3 filmes que nunca foram nomeados ao Oscar, mas que merecem ser.
 
+Q:
+```sql
+ INSERT INTO indicados_ao_oscar(ano_filmagem,ano_cerimonia,cerimonia,categoria,nome_do_indicado,nome_do_filme,vencedor) VALUES (2004,2005,3,'Melhor Filme de Animação','Stephen Hillenburg','Bob Esponja: O Filme','true');
+INSERT INTO indicados_ao_oscar(ano_filmagem,ano_cerimonia,cerimonia,categoria,nome_do_indicado,nome_do_filme,vencedor) VALUES (2015,2016,3,'Melhor Filme de Animação','Stephen Hillenburg','Bob Esponja: Um Herói Fora d. Água','true');
+INSERT INTO indicados_ao_oscar(ano_filmagem,ano_cerimonia,cerimonia,categoria,nome_do_indicado,nome_do_filme,vencedor) VALUES (2019,2020,3,'Melhor Filme de Animação','Maurício de Sousa Produções','Turma da Mônica: O Filme','true');
+```
+---
+
 ### 11) Denzel Washington já ganhou algum Oscar?
 **Resposta**:  
 
