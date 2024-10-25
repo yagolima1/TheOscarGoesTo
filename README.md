@@ -113,12 +113,21 @@ SELECT * FROM indicados_ao_oscar WHERE categoria = "BEST PICTURE" AND vencedor =
 ```
 ---
 
-
 ### Bonus: Quais filmes ganharam o Oscar de Melhor Filme e Melhor Diretor na mesma cerimônia?
-**Resposta**:  
+**Resposta**: Nenhum filme venceu essas 2 categorias juntas.
+
+```sql
+SELECT * FROM indicados_ao_oscar WHERE vencedor = "1" AND categoria = "BEST PICTURE" AND categoria = "DIRECTING";
+```
+---
 
 ### Bonus: Denzel Washington e Jamie Foxx já concorreram ao Oscar no mesmo ano?
-**Resposta**:  
+**Resposta**: Não, eles nunca concorreram ao Oscar no mesmo ano.
+
+```sql
+SELECT nome_do_indicado, ano_cerimonia FROM indicados_ao_oscar WHERE nome_do_indicado like "%Denzel Washington%" AND nome_do_indicado like "%Jamie Foxx%";
+```
+---
 
 ## Como Executar
 1. Clone este repositório.
