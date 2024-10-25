@@ -62,7 +62,7 @@ SELECT * FROM indicados_ao_oscar WHERE vencedor = "true" AND categoria = "ACTRES
 Q:
 ```sql
 UPDATE indicados_ao_oscar SET vencedor = "1" WHERE vencedor = "true";
- UPDATE indicados_ao_oscar SET vencedor = "0" WHERE vencedor = "false";
+UPDATE indicados_ao_oscar SET vencedor = "0" WHERE vencedor = "false";
 ```
 ---
 
