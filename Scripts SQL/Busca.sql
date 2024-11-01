@@ -23,6 +23,14 @@ USE oscar_database;
 
 -- SELECT * FROM indicados_ao_oscar WHERE categoria = "BEST PICTURE" AND vencedor = "1";
 
--- SELECT * FROM indicados_ao_oscar WHERE vencedor = "1" AND categoria = "BEST PICTURE" AND categoria = "DIRECTING";
+-- SELECT DISTINCT nome_do_filme
+-- FROM indicados_ao_oscar
+-- WHERE vencedor = 1 
+-- AND categoria = 'BEST PICTURE'
+-- AND nome_do_filme IN (
+-- SELECT nome_do_filme
+-- FROM indicados_ao_oscar
+-- WHERE categoria = 'DIRECTING' 
+-- AND vencedor = 1 );
 
 -- SELECT nome_do_indicado, ano_cerimonia FROM indicados_ao_oscar WHERE nome_do_indicado like "%Denzel Washington%" AND nome_do_indicado like "%Jamie Foxx%";
