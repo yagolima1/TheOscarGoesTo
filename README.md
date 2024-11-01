@@ -107,17 +107,27 @@ SELECT * FROM indicados_ao_oscar WHERE nome_do_indicado like "%Denzel Washington
 **Resposta**: Lawrence of Arabia
 Tom Jones | My Fair Lady | The Sound of Music | A Man for All Seasons | In the Heat of the Night | Oliver! | Midnight Cowboy | Patton | The French Connection | The Godfather | The Sting | The Godfather Part II | One Flew over the Cuckoo's Nest | Rocky | Annie Hall | The Deer Hunter | Kramer vs. Kramer | Ordinary People | Chariots of Fire | Gandhi | Terms of Endearment | Amadeus | Out of Africa | Platoon | The Last Emperor | Rain Man | Driving Miss Daisy | Dances With Wolves | The Silence of the Lambs | Unforgiven | Schindler's List | Forrest Gump | Braveheart | The English Patient | Titanic | Shakespeare in Love | American Beauty | Gladiator | A Beautiful Mind | Chicago | The Lord of the Rings: The Return of the King | Million Dollar Baby | Crash | The Departed | No Country for Old Men | Slumdog Millionaire | The Hurt Locker | The King's Speech | The Artist | Argo | 12 Years a Slave | Birdman or (The Unexpected Virtue of Ignorance) | Spotlight | Moonlight | The Shape of Water | Green Book | Parasite | Nomadland | CODA | Everything Everywhere All at Once | Oppenheimer
 
-
+Q:
 ```sql
 SELECT * FROM indicados_ao_oscar WHERE categoria = "BEST PICTURE" AND vencedor = "1";
 ```
 ---
 
 ### Bonus: Quais filmes ganharam o Oscar de Melhor Filme e Melhor Diretor na mesma cerimônia?
-**Resposta**: Nenhum filme venceu essas 2 categorias juntas.
+**Resposta**: Lawrence of Arabia, Tom Jones, My Fair Lady, The Sound of Music, A Man for All Seasons, Oliver!, Midnight Cowboy, Patton, The French Connection, The Sting, The Godfather Part II, One Flew Over the Cuckoo's Nest, Rocky, Annie Hall, The Deer Hunter, Kramer vs. Kramer, Ordinary People, Gandhi, Terms of Endearment, Amadeus, Out of Africa, Platoon, The Last Emperor, Rain Man, Dances With Wolves, The Silence of the Lambs, Unforgiven, Schindler's List, Forrest Gump, Braveheart, The English Patient, Titanic, American Beauty, A Beautiful Mind, The Lord of the Rings: The Return of the King, Million Dollar Baby, The Departed, No Country for Old Men, Slumdog Millionaire, The Hurt Locker, The King's Speech, The Artist, Birdman or (The Unexpected Virtue of Ignorance), The Shape of Water, Parasite, Nomadland, Everything Everywhere All at Once, Oppenheimer. 
 
+Q:
 ```sql
-SELECT * FROM indicados_ao_oscar WHERE vencedor = "1" AND categoria = "BEST PICTURE" AND categoria = "DIRECTING";
+SELECT DISTINCT nome_do_filme
+FROM indicados_ao_oscar
+WHERE vencedor = 1 
+  AND categoria = 'BEST PICTURE'
+  AND nome_do_filme IN (
+      SELECT nome_do_filme
+      FROM indicados_ao_oscar
+      WHERE categoria = 'DIRECTING' 
+      AND vencedor = 1
+  );
 ```
 ---
 
